@@ -1,0 +1,121 @@
+.landing {
+  .landing-hero {
+    height: 100vh;
+    border-bottom: 7px solid grey;
+    background-image: url("../img/felipe-bustillo-4VDRCoNuvE0-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    .overlay {
+      position: absolute;
+      background-color: black;
+      opacity: 0.7;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+    }
+
+    .content {
+      display: flex;
+      padding: 0 5%;
+      flex-direction: column;
+      overflow: hidden;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 8;
+
+      @media screen and (min-width: $medium) {
+        align-items: center;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: white;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        text-align: center;
+
+        @media screen and (max-width: $small) {
+          font-size: 2rem;
+        }
+        @media screen and (min-width: $medium) {
+          font-size: 4rem;
+        }
+      }
+      h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: 100;
+        padding: 1rem 0;
+
+        @media screen and (max-width: $small) {
+          font-size: 0.5rem;
+        }
+        @media screen and (min-width: $medium) {
+          font-size: 2rem;
+        }
+      }
+      h3 {
+        font-size: 1rem;
+        font-weight: 100;
+      }
+
+      .landing-input {
+        margin: 1.5rem 0;
+        color: #8c8c8c;
+        width: 100%;
+
+        @media screen and (min-width: $medium) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        button {
+          border: none;
+          padding: 1rem 2rem;
+          width: 100%;
+          font-size: 1.1rem;
+          cursor: pointer;
+          background-color: red;
+          margin: 1rem 0;
+          font-weight: bold;
+          color: white;
+
+          @media screen and (min-width: $medium) {
+            padding: 1.5rem 2rem;
+            width: 20%;
+            margin: 0;
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        input {
+          padding: 1.2rem 2rem;
+          width: 100%;
+
+          @media screen and (min-width: $medium) {
+            width: 35%;
+            padding: 1.6rem 2rem;
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}
